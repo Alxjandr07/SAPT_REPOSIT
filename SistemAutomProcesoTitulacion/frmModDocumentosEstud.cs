@@ -7,6 +7,9 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmModDocumentosEstud : Form
     {
+        public bool EsVistaTutor { get; set; }
+        public bool EsVistaCoordinador { get; set; }
+        public bool EsVistaTribunal { get; set; }
         public frmModDocumentosEstud()
         {
             InitializeComponent();
@@ -18,10 +21,55 @@ namespace SistemAutomProcesoTitulacion
 
             cmbTipoDocumento.SelectedIndexChanged += cmbTipoDocumento_SelectedIndexChanged;
         }
+        public void FiltrarPorTipos(string[] tipos)
+        {
+            DataTable dt = ConexionBD.ObtenerDocumentosPorTipos(tipos);
+            dgvDocumentos.DataSource = dt;
+            dgvDocumentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
 
         private void frmModDocumentosEstud_Load(object sender, EventArgs e)
         {
-            CargarDocumentos();
+            if (EsVistaTutor)
+            {
+                cmbTipoDocumento.Visible = false;
+                txtRutaArchivo.Visible = false;
+                btnExaminar.Visible = false;
+                btnSubir.Visible = false;
+                btnEliminar.Visible = false;
+                btnVer.Visible = true;
+
+                FiltrarPorTipo("Avance");
+            }
+            else if (EsVistaTribunal)
+            {
+                cmbTipoDocumento.Visible = true;
+
+                txtRutaArchivo.Visible = false;
+                btnExaminar.Visible = false;
+                btnEliminar.Visible = false;
+                btnSubir.Visible = false;
+                btnVer.Visible = true;
+                // Mostrar solo tipos relevantes en el ComboBox
+                cmbTipoDocumento.Items.Clear();
+                cmbTipoDocumento.Items.Add("Avance");
+                cmbTipoDocumento.Items.Add("Proyecto Terminado");
+                cmbTipoDocumento.SelectedIndex = 0;
+
+                FiltrarPorTipos(new[] { "Avance", "Proyecto Terminado" });
+            }
+            else
+            {
+                // Estudiante
+                cmbTipoDocumento.Visible = true;
+                txtRutaArchivo.Visible = true;
+                btnExaminar.Visible = true;
+                btnSubir.Visible = true;
+                btnEliminar.Visible = true;
+                btnVer.Visible = true;
+
+                CargarDocumentos();
+            }
         }
 
         private void btnExaminar_Click(object sender, EventArgs e)
@@ -185,6 +233,19 @@ namespace SistemAutomProcesoTitulacion
             else
             {
                 dgvDocumentos.DataSource = ConexionBD.ObtenerDocumentosPorTipo(tipoSeleccionado); // con filtro
+            }
+            cmbTipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        public void FiltrarPorTipo(string tipo)
+        {
+            DataTable dt = ConexionBD.ObtenerDocumentosPorTipo(tipo);
+            dgvDocumentos.DataSource = dt;
+
+            dgvDocumentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("⚠️ No hay documentos de tipo '" + tipo + "' subidos aún.");
             }
         }
     }

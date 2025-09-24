@@ -13,7 +13,7 @@ namespace SistemAutomProcesoTitulacion
     public partial class frmTutor : Form
     {
         private Tutor tutor;
-
+    
         public frmTutor(Tutor tutor, string nombre, string rol)
         {
             InitializeComponent();
@@ -134,5 +134,43 @@ namespace SistemAutomProcesoTitulacion
             panelContenedorTutor.Controls.Add(gestionDoc);
             gestionDoc.Show();
         }
+
+        private void btnEnvioDoc_Click(object sender, EventArgs e)
+        {
+            panelContenedorTutor.Controls.Clear();
+            panelContenedorTutor.Visible = true;
+
+            frmModDocumentosEstud avancesForm = new frmModDocumentosEstud();
+            avancesForm.EsVistaTutor = true; // 👈 Activamos modo tutor
+
+            avancesForm.TopLevel = false;
+            avancesForm.FormBorderStyle = FormBorderStyle.None;
+            avancesForm.Dock = DockStyle.Fill;
+            avancesForm.Size = panelContenedorTutor.ClientSize;
+
+            panelContenedorTutor.Controls.Add(avancesForm);
+            avancesForm.Show();
+            avancesForm.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelContenedorTutor.Controls.Clear();
+
+            frmGestionReunion reunionesForm = new frmGestionReunion();
+
+            // 👇 Configura el modo como estudiante (no coordinador)
+            reunionesForm.ConfigurarModo(false);
+
+            reunionesForm.TopLevel = false;
+            reunionesForm.FormBorderStyle = FormBorderStyle.None;
+            reunionesForm.Dock = DockStyle.Fill;
+            reunionesForm.Size = panelContenedorTutor.ClientSize;
+
+            panelContenedorTutor.Controls.Add(reunionesForm);
+            reunionesForm.Show();
+            reunionesForm.BringToFront();
+        }
     }
+
 }

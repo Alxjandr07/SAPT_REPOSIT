@@ -12,7 +12,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class ConexionBD
     {
-        private static string cadena = "Server=ALXJANDR07PC\\SQLEXPRESS; Database=SistemaTitulacionUTEQ; Integrated Security=true";
+        private static string cadena = "Server=.; Database=SistemaTitulacionUTEQ; Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(cadena);
 
         public static SqlConnection ObtenerConexion()
@@ -562,6 +562,39 @@ namespace SistemAutomProcesoTitulacion
             }
             return dt;
         }
+        public static DataTable ObtenerDocumentosPorTipos(string[] tipos)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+
+                    List<string> parametros = new List<string>();
+                    for (int i = 0; i < tipos.Length; i++)
+                    {
+                        string paramName = "@Tipo" + i;
+                        parametros.Add(paramName);
+                        cmd.Parameters.AddWithValue(paramName, tipos[i]);
+                    }
+
+                    string filtro = string.Join(", ", parametros);
+                    cmd.CommandText = $"SELECT IdDocumento, Nombre, Tipo, FechaSubida FROM SbrDocumento WHERE Tipo IN ({filtro})";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al filtrar documentos por múltiples tipos: " + ex.Message);
+            }
+            return dt;
+        }
 
         public static bool VisualizarDocumento(int idDocumento)
         {
@@ -569,7 +602,7 @@ namespace SistemAutomProcesoTitulacion
             try
             {
                 using (SqlConnection conn = new SqlConnection(cadena))
-                using (SqlCommand cmd = new SqlCommand("SELECT Nombre, Tipo, Datos FROM SbrDocumento WHERE IdDocumento=@id", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT Nombre, Datos FROM SbrDocumento WHERE IdDocumento=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", idDocumento);
                     conn.Open();
@@ -578,10 +611,10 @@ namespace SistemAutomProcesoTitulacion
                         if (reader.Read())
                         {
                             string nombre = reader["Nombre"].ToString();
-                            string tipo = reader["Tipo"].ToString().ToLower();
                             byte[] datos = (byte[])reader["Datos"];
 
-                            if (tipo != "pdf" && tipo != "doc" && tipo != "docx")
+                            string extension = Path.GetExtension(nombre).ToLower();
+                            if (extension != ".pdf" && extension != ".doc" && extension != ".docx")
                                 return false;
 
                             string tempPath = Path.Combine(Path.GetTempPath(), nombre);
