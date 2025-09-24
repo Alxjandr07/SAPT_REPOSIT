@@ -41,6 +41,7 @@ namespace SistemAutomProcesoTitulacion
 
             // Validar credenciales y obtener nombre + rol
             var resultado = ConexionBD.ValidarLoginDatos(correo, contrasena);
+            int idUsuario = resultado.IdUsuario;
             string nombre = resultado.Nombre;
             string rol = resultado.Rol;
 
@@ -82,6 +83,7 @@ namespace SistemAutomProcesoTitulacion
                 case "Coordinador":
                     var coordinador = new Coordinador
                     {
+                        IdCoordinador = idUsuario,
                         Nombre = nombre,
                         Correo = correo
                     };
