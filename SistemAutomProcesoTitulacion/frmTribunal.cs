@@ -112,5 +112,22 @@ namespace SistemAutomProcesoTitulacion
                 }
             }
         }
+
+        private void btnProyectos_Click(object sender, EventArgs e)
+        {
+            panelContenedorTribunal.Controls.Clear();
+
+            frmModDocumentosEstud proyectosForm = new frmModDocumentosEstud();
+            proyectosForm.EsVistaTribunal = true;
+
+            proyectosForm.TopLevel = false;
+            proyectosForm.FormBorderStyle = FormBorderStyle.None;
+            proyectosForm.Dock = DockStyle.Fill;
+            proyectosForm.Size = panelContenedorTribunal.ClientSize;
+
+            panelContenedorTribunal.Controls.Add(proyectosForm);
+            proyectosForm.Show();
+            proyectosForm.BringToFront();
+        }
     }
 }
