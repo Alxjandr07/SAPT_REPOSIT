@@ -42,8 +42,6 @@
             this.btnReunion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pnlAutoridades = new System.Windows.Forms.Panel();
-            this.btnRevisionDoc = new System.Windows.Forms.Button();
             this.panelInformacion = new System.Windows.Forms.Panel();
             this.lblLogOut = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,7 +59,6 @@
             this.pnlEnvioDoc.SuspendLayout();
             this.pnlReunion.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnlAutoridades.SuspendLayout();
             this.panelInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -158,7 +155,6 @@
             this.flpMenu.Controls.Add(this.pnlEnvioDoc);
             this.flpMenu.Controls.Add(this.pnlReunion);
             this.flpMenu.Controls.Add(this.panel1);
-            this.flpMenu.Controls.Add(this.pnlAutoridades);
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpMenu.Location = new System.Drawing.Point(0, 33);
             this.flpMenu.Name = "flpMenu";
@@ -247,34 +243,6 @@
             this.button1.Text = "Reuniones";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pnlAutoridades
-            // 
-            this.pnlAutoridades.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAutoridades.Controls.Add(this.btnRevisionDoc);
-            this.pnlAutoridades.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAutoridades.Location = new System.Drawing.Point(0, 135);
-            this.pnlAutoridades.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAutoridades.Name = "pnlAutoridades";
-            this.pnlAutoridades.Size = new System.Drawing.Size(245, 45);
-            this.pnlAutoridades.TabIndex = 6;
-            // 
-            // btnRevisionDoc
-            // 
-            this.btnRevisionDoc.BackColor = System.Drawing.Color.Green;
-            this.btnRevisionDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRevisionDoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevisionDoc.ForeColor = System.Drawing.Color.White;
-            this.btnRevisionDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevisionDoc.Location = new System.Drawing.Point(-4, -4);
-            this.btnRevisionDoc.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRevisionDoc.Name = "btnRevisionDoc";
-            this.btnRevisionDoc.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnRevisionDoc.Size = new System.Drawing.Size(253, 53);
-            this.btnRevisionDoc.TabIndex = 1;
-            this.btnRevisionDoc.Text = "Revision de Documentos";
-            this.btnRevisionDoc.UseVisualStyleBackColor = false;
-            this.btnRevisionDoc.Click += new System.EventHandler(this.btnRevisionDoc_Click);
             // 
             // panelInformacion
             // 
@@ -379,7 +347,6 @@
             this.pnlEnvioDoc.ResumeLayout(false);
             this.pnlReunion.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.pnlAutoridades.ResumeLayout(false);
             this.panelInformacion.ResumeLayout(false);
             this.panelInformacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -403,8 +370,6 @@
         private System.Windows.Forms.Button btnReunion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel pnlAutoridades;
-        private System.Windows.Forms.Button btnRevisionDoc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelInformacion;
         private System.Windows.Forms.Label lblRol;

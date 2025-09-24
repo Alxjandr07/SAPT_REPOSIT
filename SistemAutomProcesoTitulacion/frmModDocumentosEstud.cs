@@ -221,7 +221,6 @@ namespace SistemAutomProcesoTitulacion
                 MessageBox.Show("❌ Error al visualizar el documento.");
             }
         }
-
         private void cmbTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tipoSeleccionado = cmbTipoDocumento.SelectedItem.ToString();
