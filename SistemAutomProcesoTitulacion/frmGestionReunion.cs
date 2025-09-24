@@ -20,6 +20,7 @@ namespace SistemAutomProcesoTitulacion
             this.Load += frmGestionReunion_Load;
         }
 
+
         private void tsbModificar_Click(object sender, EventArgs e)
         {
 
@@ -28,16 +29,25 @@ namespace SistemAutomProcesoTitulacion
         private void btnMarcar_Click(object sender, EventArgs e)
         {
             DateTime dia = monthCalendar1.SelectionStart;
+            string lugar = txtLugarReunion.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(lugar))
+            {
+                MessageBox.Show("⚠️ Por favor, ingresa el lugar de la reunión.");
+                return;
+            }
 
             if (!monthCalendar1.BoldedDates.Contains(dia))
             {
                 monthCalendar1.AddBoldedDate(dia);
                 monthCalendar1.UpdateBoldedDates();
 
-                string texto = $"El día {dia.ToShortDateString()} se convoca a una reunión.";
-                ConexionBD.AgregarInformacionReunion(texto);
+                // 👇 Puedes ajustar la hora fija aquí
+                string horaFija = "10:00";
+                string texto = $"📅 {dia:dddd dd/MM/yyyy} a las {horaFija} en {lugar}";
 
-                ActualizarLabelReuniones(); // Solo actualiza visualmente
+                ConexionBD.AgregarInformacionReunion(texto);
+                ActualizarLabelReuniones();
             }
         }
 
@@ -63,18 +73,15 @@ namespace SistemAutomProcesoTitulacion
 
         private void ActualizarLabelReuniones()
         {
-            if (monthCalendar1.BoldedDates.Length == 0)
+            var mensajes = ConexionBD.ObtenerTodasLasInformacionesReuniones();
+
+            if (string.IsNullOrWhiteSpace(mensajes))
             {
-                lblMensaje.Text = "No hay reuniones programadas.";
+                lblMensaje.Text = "Sin Reuniones Activas";
             }
             else
             {
-                var fechas = monthCalendar1.BoldedDates
-                    .OrderBy(f => f)
-                    .Select((f, i) => $"{i + 1}. {f.ToShortDateString()}")
-                    .ToList();
-
-                lblMensaje.Text = "Reuniones programadas:\n" + string.Join("\n", fechas);
+                lblMensaje.Text = "Reuniones Activas:\n" + mensajes;
             }
         }
 
@@ -84,6 +91,8 @@ namespace SistemAutomProcesoTitulacion
             btnDesmarcar.Visible = esCoordinador;
             btnEliminarReuniones.Visible = esCoordinador;
             monthCalendar1.Enabled = esCoordinador;
+            txtLugarReunion.Visible = esCoordinador;
+            lblTituloLugarReunion.Visible = esCoordinador;
         }
 
         public string MensajeReuniones
@@ -124,6 +133,11 @@ namespace SistemAutomProcesoTitulacion
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

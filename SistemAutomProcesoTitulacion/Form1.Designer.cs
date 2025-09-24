@@ -35,7 +35,6 @@
             this.panelImagenLogin = new System.Windows.Forms.Panel();
             this.pboxImagenLogin = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.linkLabelContra = new System.Windows.Forms.LinkLabel();
             this.btnMostrarContra = new System.Windows.Forms.Button();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -120,7 +119,6 @@
             // 
             // panelLogin
             // 
-            this.panelLogin.Controls.Add(this.linkLabelContra);
             this.panelLogin.Controls.Add(this.btnMostrarContra);
             this.panelLogin.Controls.Add(this.btnAcceder);
             this.panelLogin.Controls.Add(this.label3);
@@ -136,18 +134,6 @@
             this.panelLogin.Size = new System.Drawing.Size(276, 225);
             this.panelLogin.TabIndex = 2;
             this.panelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogin_Paint);
-            // 
-            // linkLabelContra
-            // 
-            this.linkLabelContra.AutoSize = true;
-            this.linkLabelContra.LinkColor = System.Drawing.Color.Green;
-            this.linkLabelContra.Location = new System.Drawing.Point(71, 204);
-            this.linkLabelContra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabelContra.Name = "linkLabelContra";
-            this.linkLabelContra.Size = new System.Drawing.Size(146, 13);
-            this.linkLabelContra.TabIndex = 8;
-            this.linkLabelContra.TabStop = true;
-            this.linkLabelContra.Text = "¿Ha olvidado su contraseña?";
             // 
             // btnMostrarContra
             // 
@@ -291,7 +277,6 @@
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.Button btnMostrarContra;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.LinkLabel linkLabelContra;
         private System.Windows.Forms.Label label4;
     }
 }
