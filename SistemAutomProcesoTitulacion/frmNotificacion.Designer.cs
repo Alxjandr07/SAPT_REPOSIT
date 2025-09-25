@@ -28,170 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPara = new System.Windows.Forms.Label();
-            this.lblMensaje = new System.Windows.Forms.Label();
-            this.lblAsunto = new System.Windows.Forms.Label();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.cmbPara = new System.Windows.Forms.ComboBox();
-            this.txtAsunto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtMensaje = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAdjuntar = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelNotificacion = new System.Windows.Forms.Panel();
+            this.btnTodo = new System.Windows.Forms.Button();
+            this.btnNoLeido = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.dgvNotificacion = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMensaje = new System.Windows.Forms.TextBox();
+            this.txtPara = new System.Windows.Forms.TextBox();
+            this.btnVer = new System.Windows.Forms.Button();
+            this.txtAsunto = new System.Windows.Forms.TextBox();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelNotificacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotificacion)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblPara
-            // 
-            this.lblPara.AutoSize = true;
-            this.lblPara.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPara.Location = new System.Drawing.Point(31, 43);
-            this.lblPara.Name = "lblPara";
-            this.lblPara.Size = new System.Drawing.Size(58, 23);
-            this.lblPara.TabIndex = 0;
-            this.lblPara.Text = "Para:";
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(3, 5);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(153, 23);
-            this.lblMensaje.TabIndex = 1;
-            this.lblMensaje.Text = "Mensaje Nuevo";
-            // 
-            // lblAsunto
-            // 
-            this.lblAsunto.AutoSize = true;
-            this.lblAsunto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsunto.Location = new System.Drawing.Point(31, 86);
-            this.lblAsunto.Name = "lblAsunto";
-            this.lblAsunto.Size = new System.Drawing.Size(77, 23);
-            this.lblAsunto.TabIndex = 2;
-            this.lblAsunto.Text = "Asunto:";
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEnviar.FlatAppearance.BorderSize = 2;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.ForeColor = System.Drawing.Color.Green;
-            this.btnEnviar.Location = new System.Drawing.Point(122, 395);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(104, 43);
-            this.btnEnviar.TabIndex = 14;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // cmbPara
-            // 
-            this.cmbPara.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmbPara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPara.FormattingEnabled = true;
-            this.cmbPara.Items.AddRange(new object[] {
-            "Coordinador",
-            "Comité de investigación",
-            "Director",
-            "Estudiante",
-            "Secretaría",
-            "Tribunal",
-            "Tutor"});
-            this.cmbPara.Location = new System.Drawing.Point(109, 45);
-            this.cmbPara.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbPara.Name = "cmbPara";
-            this.cmbPara.Size = new System.Drawing.Size(184, 21);
-            this.cmbPara.TabIndex = 15;
-            // 
-            // txtAsunto
-            // 
-            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAsunto.Location = new System.Drawing.Point(109, 86);
-            this.txtAsunto.Name = "txtAsunto";
-            this.txtAsunto.Size = new System.Drawing.Size(183, 20);
-            this.txtAsunto.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(374, 214);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 23);
-            this.label1.TabIndex = 18;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lblPara);
-            this.panel1.Controls.Add(this.lblAsunto);
-            this.panel1.Controls.Add(this.txtAsunto);
-            this.panel1.Controls.Add(this.cmbPara);
-            this.panel1.Location = new System.Drawing.Point(122, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 312);
-            this.panel1.TabIndex = 19;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(298, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(253, 103);
-            this.panel5.TabIndex = 18;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lblMensaje);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(157, 33);
-            this.panel4.TabIndex = 21;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtMensaje);
-            this.panel2.Location = new System.Drawing.Point(3, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(548, 195);
-            this.panel2.TabIndex = 17;
-            // 
-            // txtMensaje
-            // 
-            this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMensaje.Location = new System.Drawing.Point(3, 3);
-            this.txtMensaje.Multiline = true;
-            this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(540, 187);
-            this.txtMensaje.TabIndex = 0;
             // 
             // panel3
             // 
@@ -202,7 +59,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 48);
-            this.panel3.TabIndex = 20;
+            this.panel3.TabIndex = 21;
             // 
             // label2
             // 
@@ -230,68 +87,214 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "UTEQ";
             // 
-            // btnAdjuntar
+            // panel1
             // 
-            this.btnAdjuntar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdjuntar.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.adjuntar_archivo;
-            this.btnAdjuntar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdjuntar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAdjuntar.FlatAppearance.BorderSize = 2;
-            this.btnAdjuntar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdjuntar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdjuntar.ForeColor = System.Drawing.Color.Green;
-            this.btnAdjuntar.Location = new System.Drawing.Point(232, 395);
-            this.btnAdjuntar.Name = "btnAdjuntar";
-            this.btnAdjuntar.Size = new System.Drawing.Size(104, 43);
-            this.btnAdjuntar.TabIndex = 21;
-            this.btnAdjuntar.UseVisualStyleBackColor = true;
-            this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
-            this.btnAdjuntar.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnVer);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnNoLeido);
+            this.panel1.Controls.Add(this.btnTodo);
+            this.panel1.Controls.Add(this.panelNotificacion);
+            this.panel1.Location = new System.Drawing.Point(12, 103);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(530, 286);
+            this.panel1.TabIndex = 22;
+            // 
+            // panelNotificacion
+            // 
+            this.panelNotificacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelNotificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNotificacion.Controls.Add(this.dgvNotificacion);
+            this.panelNotificacion.Location = new System.Drawing.Point(3, 3);
+            this.panelNotificacion.Name = "panelNotificacion";
+            this.panelNotificacion.Size = new System.Drawing.Size(522, 229);
+            this.panelNotificacion.TabIndex = 17;
+            // 
+            // btnTodo
+            // 
+            this.btnTodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnTodo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnTodo.FlatAppearance.BorderSize = 2;
+            this.btnTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodo.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodo.ForeColor = System.Drawing.Color.Green;
+            this.btnTodo.Location = new System.Drawing.Point(3, 238);
+            this.btnTodo.Name = "btnTodo";
+            this.btnTodo.Size = new System.Drawing.Size(104, 43);
+            this.btnTodo.TabIndex = 18;
+            this.btnTodo.Text = "Todos";
+            this.btnTodo.UseVisualStyleBackColor = true;
+            this.btnTodo.Click += new System.EventHandler(this.btnTodo_Click);
+            // 
+            // btnNoLeido
+            // 
+            this.btnNoLeido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNoLeido.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnNoLeido.FlatAppearance.BorderSize = 2;
+            this.btnNoLeido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoLeido.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNoLeido.ForeColor = System.Drawing.Color.Green;
+            this.btnNoLeido.Location = new System.Drawing.Point(113, 238);
+            this.btnNoLeido.Name = "btnNoLeido";
+            this.btnNoLeido.Size = new System.Drawing.Size(104, 43);
+            this.btnNoLeido.TabIndex = 19;
+            this.btnNoLeido.Text = "No leidos";
+            this.btnNoLeido.UseVisualStyleBackColor = true;
+            this.btnNoLeido.Click += new System.EventHandler(this.btnNoLeido_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Red;
+            this.btnEliminar.Location = new System.Drawing.Point(421, 238);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(104, 43);
+            this.btnEliminar.TabIndex = 20;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // dgvNotificacion
+            // 
+            this.dgvNotificacion.AllowUserToAddRows = false;
+            this.dgvNotificacion.AllowUserToDeleteRows = false;
+            this.dgvNotificacion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvNotificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotificacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNotificacion.Location = new System.Drawing.Point(0, 0);
+            this.dgvNotificacion.Name = "dgvNotificacion";
+            this.dgvNotificacion.ReadOnly = true;
+            this.dgvNotificacion.Size = new System.Drawing.Size(520, 227);
+            this.dgvNotificacion.TabIndex = 0;
+            this.dgvNotificacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotificacion_CellContentClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnConfirmar);
+            this.panel2.Controls.Add(this.txtAsunto);
+            this.panel2.Controls.Add(this.txtPara);
+            this.panel2.Controls.Add(this.txtMensaje);
+            this.panel2.Location = new System.Drawing.Point(548, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(240, 286);
+            this.panel2.TabIndex = 23;
+            // 
+            // txtMensaje
+            // 
+            this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMensaje.Location = new System.Drawing.Point(3, 55);
+            this.txtMensaje.Multiline = true;
+            this.txtMensaje.Name = "txtMensaje";
+            this.txtMensaje.Size = new System.Drawing.Size(232, 177);
+            this.txtMensaje.TabIndex = 0;
+            // 
+            // txtPara
+            // 
+            this.txtPara.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPara.Location = new System.Drawing.Point(3, 3);
+            this.txtPara.Name = "txtPara";
+            this.txtPara.Size = new System.Drawing.Size(232, 20);
+            this.txtPara.TabIndex = 24;
+            // 
+            // btnVer
+            // 
+            this.btnVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnVer.FlatAppearance.BorderSize = 2;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.Color.Green;
+            this.btnVer.Location = new System.Drawing.Point(223, 238);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(104, 43);
+            this.btnVer.TabIndex = 21;
+            this.btnVer.Text = "Ver";
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
+            // txtAsunto
+            // 
+            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAsunto.Location = new System.Drawing.Point(3, 29);
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.Size = new System.Drawing.Size(232, 20);
+            this.txtAsunto.TabIndex = 25;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnConfirmar.FlatAppearance.BorderSize = 2;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Green;
+            this.btnConfirmar.Location = new System.Drawing.Point(131, 238);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(104, 43);
+            this.btnConfirmar.TabIndex = 22;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // frmNotificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAdjuntar);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNotificacion";
             this.Text = "frmNotificacion";
-            this.Load += new System.EventHandler(this.frmNotificacion_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panelNotificacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotificacion)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblPara;
-        private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.Label lblAsunto;
-        private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.ComboBox cmbPara;
-        private System.Windows.Forms.TextBox txtAsunto;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelNotificacion;
+        private System.Windows.Forms.Button btnNoLeido;
+        private System.Windows.Forms.Button btnTodo;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView dgvNotificacion;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtMensaje;
-        private System.Windows.Forms.Button btnAdjuntar;
+        private System.Windows.Forms.TextBox txtPara;
+        private System.Windows.Forms.Button btnVer;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.TextBox txtAsunto;
     }
 }

@@ -181,25 +181,21 @@ namespace SistemAutomProcesoTitulacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        
-
-
-
-        
-
         private void btnReunion_Click(object sender, EventArgs e)
         {
             panelContenedor.Controls.Clear();
 
-            var frm = new frmGestionReunion();
+            frmGestionReunion frm = new frmGestionReunion();
+            frm.ConfigurarModo(false, false); // 👈 Solo visualización
+
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
-            frm.ConfigurarModo(false); // Solo visualización para el estudiante
+            frm.Size = panelContenedor.ClientSize;
 
             panelContenedor.Controls.Add(frm);
             frm.Show();
+            frm.BringToFront();
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
@@ -257,8 +253,18 @@ namespace SistemAutomProcesoTitulacion
 
         }
 
-        
-
-        
+        private void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            if (estudiante != null)
+            {
+                frmNotificacion notificacion = new frmNotificacion(estudiante.IdEstudiante);
+                notificacion.Owner = this; // 'this' es frmMenuCoordinador
+                funciones.AbrirFormularioEnPanel(notificacion, panelContenedor);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró información del estudiante.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

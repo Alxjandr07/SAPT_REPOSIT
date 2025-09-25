@@ -1,80 +1,109 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemAutomProcesoTitulacion
 {
     public partial class frmNotificacion : Form
     {
-        private ToolTip toolTip1 = new ToolTip();
-        private Coordinador coordinador;
+        private int idEstudiante;
 
-        public frmNotificacion(Coordinador coordinador)
+        public frmNotificacion(int idEstudiante)
         {
             InitializeComponent();
-            this.coordinador = coordinador;
-            this.Load += frmNotificacion_Load;
-            toolTip1.SetToolTip(btnAdjuntar, "Adjuntar");
+            this.idEstudiante = idEstudiante;
+            CargarNotificaciones();
         }
 
-        private void frmNotificacion_Load(object sender, EventArgs e)
+        private void CargarNotificaciones(bool soloNoLeidos = false)
         {
+            dgvNotificacion.AutoGenerateColumns = true;
 
+            // Obtiene las notificaciones según la lógica de negocio
+            DataTable dt = Notificacion.ObtenerNotificacionesEstudiante(idEstudiante, soloNoLeidos);
+
+            // Asigna el resultado al DataGridView
+            dgvNotificacion.DataSource = dt;
+
+            // Oculta columnas que no quieres mostrar
+            if (dgvNotificacion.Columns.Contains("IdNotificacion"))
+                dgvNotificacion.Columns["IdNotificacion"].Visible = false;
+            if (dgvNotificacion.Columns.Contains("Estado"))
+                dgvNotificacion.Columns["Estado"].Visible = false;
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void dgvNotificacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void btnAdjuntar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEnviar_Click(object sender, EventArgs e)
-        {
-            string para = cmbPara.Text.Trim();
-            string asunto = txtAsunto.Text.Trim();
-            string mensaje = txtMensaje.Text.Trim();
-
-            // Validación: "Para" y "Mensaje" no pueden estar vacíos
-            if (string.IsNullOrWhiteSpace(para))
+            if (dgvNotificacion.Columns[e.ColumnIndex].Name == "Leido" && e.RowIndex >= 0)
             {
-                MessageBox.Show("El campo 'Para' no puede estar vacío.");
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(mensaje))
-            {
-                MessageBox.Show("El campo 'Mensaje' no puede estar vacío.");
-                return;
-            }
-
-            bool exito = coordinador.EnviarNotificacion(para, asunto, mensaje);
-
-            if (exito)
-            {
-                MessageBox.Show("Notificación enviada correctamente.");
-                LimpiarCampos();
-            }
-            else
-            {
-                MessageBox.Show("Error al enviar la notificación.");
+                int idNotificacion = Convert.ToInt32(dgvNotificacion.Rows[e.RowIndex].Cells["IdNotificacion"].Value);
+                Notificacion.MarcarComoLeido(idNotificacion, idEstudiante);
+                CargarNotificaciones();
             }
         }
 
-        // Método para limpiar los campos
-        private void LimpiarCampos()
+        private void btnTodo_Click(object sender, EventArgs e)
         {
-            cmbPara.SelectedIndex = -1; // O cmbPara.Text = "";
-            txtAsunto.Text = "";
-            txtMensaje.Text = "";
+            CargarNotificaciones(false);
+        }
+
+        private void btnNoLeido_Click(object sender, EventArgs e)
+        {
+            CargarNotificaciones(true);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvNotificacion.CurrentRow != null)
+            {
+                // Verifica si la notificación está leída
+                var leidoCell = dgvNotificacion.CurrentRow.Cells["Leido"].Value;
+                bool estaLeida = leidoCell != null && Convert.ToBoolean(leidoCell);
+
+                if (!estaLeida)
+                {
+                    MessageBox.Show("No puedes eliminar una notificación que no ha sido leída.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int idNotificacion = Convert.ToInt32(dgvNotificacion.CurrentRow.Cells["IdNotificacion"].Value);
+                Notificacion.OcultarNotificacion(idNotificacion, idEstudiante);
+                CargarNotificaciones();
+            }
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            if (dgvNotificacion.CurrentRow != null)
+            {
+                // Muestra los datos en los TextBox
+                if (dgvNotificacion.Columns.Contains("Para"))
+                {
+                    txtPara.Text = dgvNotificacion.CurrentRow.Cells["Para"].Value?.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("La columna 'Para' no está disponible.");
+                }
+
+                txtAsunto.Text = dgvNotificacion.CurrentRow.Cells["Asunto"].Value?.ToString();
+                txtMensaje.Text = dgvNotificacion.CurrentRow.Cells["Mensaje"].Value?.ToString();
+
+                // Marca como leída la notificación
+                int idNotificacion = Convert.ToInt32(dgvNotificacion.CurrentRow.Cells["IdNotificacion"].Value);
+                Notificacion.MarcarComoLeido(idNotificacion, idEstudiante);
+
+                // Recarga las notificaciones para actualizar el estado
+                CargarNotificaciones();
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            // Limpia los TextBox
+            txtPara.Clear();
+            txtAsunto.Clear();
+            txtMensaje.Clear();
         }
     }
 }
