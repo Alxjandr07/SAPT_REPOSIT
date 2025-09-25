@@ -257,7 +257,7 @@ namespace SistemAutomProcesoTitulacion
         {
             if (estudiante != null)
             {
-                frmNotificacion notificacion = new frmNotificacion(estudiante.IdEstudiante);
+                frmNotificacion notificacion = new frmNotificacion(estudiante.IdEstudiante, lblRol.Text);
                 notificacion.Owner = this; // 'this' es frmMenuCoordinador
                 funciones.AbrirFormularioEnPanel(notificacion, panelContenedor);
             }

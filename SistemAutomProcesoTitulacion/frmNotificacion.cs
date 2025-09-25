@@ -6,12 +6,14 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmNotificacion : Form
     {
-        private int idEstudiante;
+        private int idUsuario;
+        private string rol;
 
-        public frmNotificacion(int idEstudiante)
+        public frmNotificacion(int idUsuario, string rol)
         {
             InitializeComponent();
-            this.idEstudiante = idEstudiante;
+            this.idUsuario = idUsuario;
+            this.rol = rol;
             CargarNotificaciones();
         }
 
@@ -20,7 +22,7 @@ namespace SistemAutomProcesoTitulacion
             dgvNotificacion.AutoGenerateColumns = true;
 
             // Obtiene las notificaciones según la lógica de negocio
-            DataTable dt = Notificacion.ObtenerNotificacionesEstudiante(idEstudiante, soloNoLeidos);
+            DataTable dt = Notificacion.ObtenerNotificacionesUsuario(idUsuario, rol, soloNoLeidos);
 
             // Asigna el resultado al DataGridView
             dgvNotificacion.DataSource = dt;
@@ -37,7 +39,7 @@ namespace SistemAutomProcesoTitulacion
             if (dgvNotificacion.Columns[e.ColumnIndex].Name == "Leido" && e.RowIndex >= 0)
             {
                 int idNotificacion = Convert.ToInt32(dgvNotificacion.Rows[e.RowIndex].Cells["IdNotificacion"].Value);
-                Notificacion.MarcarComoLeido(idNotificacion, idEstudiante);
+                Notificacion.MarcarComoLeido(idNotificacion, idUsuario);
                 CargarNotificaciones();
             }
         }
@@ -67,7 +69,7 @@ namespace SistemAutomProcesoTitulacion
                 }
 
                 int idNotificacion = Convert.ToInt32(dgvNotificacion.CurrentRow.Cells["IdNotificacion"].Value);
-                Notificacion.OcultarNotificacion(idNotificacion, idEstudiante);
+                Notificacion.OcultarNotificacion(idNotificacion, idUsuario);
                 CargarNotificaciones();
             }
         }
@@ -91,7 +93,7 @@ namespace SistemAutomProcesoTitulacion
 
                 // Marca como leída la notificación
                 int idNotificacion = Convert.ToInt32(dgvNotificacion.CurrentRow.Cells["IdNotificacion"].Value);
-                Notificacion.MarcarComoLeido(idNotificacion, idEstudiante);
+                Notificacion.MarcarComoLeido(idNotificacion, idUsuario);
 
                 // Recarga las notificaciones para actualizar el estado
                 CargarNotificaciones();
