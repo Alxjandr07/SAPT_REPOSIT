@@ -43,6 +43,8 @@
             this.txtAsunto = new System.Windows.Forms.TextBox();
             this.txtPara = new System.Windows.Forms.TextBox();
             this.txtMensaje = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelNotificacion.SuspendLayout();
@@ -201,6 +203,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnConfirmar);
             this.panel2.Controls.Add(this.txtAsunto);
             this.panel2.Controls.Add(this.txtPara);
@@ -228,22 +232,27 @@
             // 
             // txtAsunto
             // 
-            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAsunto.Location = new System.Drawing.Point(3, 29);
+            this.txtAsunto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtAsunto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAsunto.Location = new System.Drawing.Point(56, 29);
+            this.txtAsunto.Multiline = true;
             this.txtAsunto.Name = "txtAsunto";
-            this.txtAsunto.Size = new System.Drawing.Size(232, 20);
+            this.txtAsunto.ReadOnly = true;
+            this.txtAsunto.Size = new System.Drawing.Size(179, 46);
             this.txtAsunto.TabIndex = 25;
             // 
             // txtPara
             // 
-            this.txtPara.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPara.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPara.Location = new System.Drawing.Point(3, 3);
+            this.txtPara.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtPara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPara.Location = new System.Drawing.Point(56, 3);
             this.txtPara.Name = "txtPara";
-            this.txtPara.Size = new System.Drawing.Size(232, 20);
+            this.txtPara.ReadOnly = true;
+            this.txtPara.Size = new System.Drawing.Size(179, 20);
             this.txtPara.TabIndex = 24;
             // 
             // txtMensaje
@@ -251,11 +260,34 @@
             this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMensaje.Location = new System.Drawing.Point(3, 55);
+            this.txtMensaje.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMensaje.Location = new System.Drawing.Point(3, 81);
             this.txtMensaje.Multiline = true;
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(232, 177);
+            this.txtMensaje.ReadOnly = true;
+            this.txtMensaje.Size = new System.Drawing.Size(232, 151);
             this.txtMensaje.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Para:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 15);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Asunto:";
             // 
             // frmNotificacion
             // 
@@ -297,5 +329,7 @@
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TextBox txtAsunto;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
