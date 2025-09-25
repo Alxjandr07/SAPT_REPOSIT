@@ -85,14 +85,17 @@ namespace SistemAutomProcesoTitulacion
             }
         }
 
-        public void ConfigurarModo(bool esCoordinador)
+        public void ConfigurarModo(bool esCoordinador, bool esTutor)
         {
-            btnMarcar.Visible = esCoordinador;
-            btnDesmarcar.Visible = esCoordinador;
-            btnEliminarReuniones.Visible = esCoordinador;
-            monthCalendar1.Enabled = esCoordinador;
-            txtLugarReunion.Visible = esCoordinador;
-            lblTituloLugarReunion.Visible = esCoordinador;
+            bool puedeGestionar = esCoordinador || esTutor;
+
+            btnMarcar.Visible = puedeGestionar;
+            btnDesmarcar.Visible = puedeGestionar;
+            btnEliminarReuniones.Visible = puedeGestionar;
+            monthCalendar1.Enabled = puedeGestionar;
+
+            txtLugarReunion.Visible = puedeGestionar;
+            lblTituloLugarReunion.Visible = puedeGestionar;
         }
 
         public string MensajeReuniones
