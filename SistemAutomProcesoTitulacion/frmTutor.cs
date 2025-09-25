@@ -158,9 +158,7 @@ namespace SistemAutomProcesoTitulacion
             panelContenedorTutor.Controls.Clear();
 
             frmGestionReunion reunionesForm = new frmGestionReunion();
-
-            // 👇 Configura el modo como estudiante (no coordinador)
-            reunionesForm.ConfigurarModo(false);
+            reunionesForm.ConfigurarModo(false, true); // Tutor puede gestionar
 
             reunionesForm.TopLevel = false;
             reunionesForm.FormBorderStyle = FormBorderStyle.None;
