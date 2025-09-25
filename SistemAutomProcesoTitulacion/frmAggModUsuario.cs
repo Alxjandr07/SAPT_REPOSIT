@@ -61,6 +61,8 @@ namespace SistemAutomProcesoTitulacion
             string correo = txtCorreo.Text.Trim();
             string contrasena = txtContrasena.Text.Trim();
             string rol = cmbRol.Text.Trim();
+            string tipoUsuario = cboTipoUsuario.Text.Trim();
+
             int estado = chkEstado.Checked ? 1 : 0;
 
             if (modo == "Nuevo")
@@ -110,7 +112,8 @@ namespace SistemAutomProcesoTitulacion
                     CorreoInstitucional = correo,
                     Contrasena = contrasena,
                     Rol = rol,
-                    Estado = estado
+                    Estado = estado,
+                    TipoUsuario = tipoUsuario
                 };
 
                 if (coordinador.AgregarUsuario(nuevoUsuario))
@@ -153,6 +156,12 @@ namespace SistemAutomProcesoTitulacion
                     txtContrasena.Focus();
                     return;
                 }
+                if (string.IsNullOrWhiteSpace(tipoUsuario))
+                {
+                    MessageBox.Show("Debe seleccionar el tipo de usuario.");
+                    cboTipoUsuario.Focus();
+                    return;
+                }
 
                 // Si la contraseña está vacía o menor a 3, pasa una cadena especial para que el SP la ignore
                 string contrasenaParaActualizar = contrasena.Length >= 3 ? contrasena : "NO_CAMBIAR";
@@ -165,7 +174,8 @@ namespace SistemAutomProcesoTitulacion
                     CorreoInstitucional = correo,
                     Contrasena = contrasenaParaActualizar,
                     Rol = rol,
-                    Estado = estado
+                    Estado = estado,
+                    TipoUsuario = tipoUsuario
                 };
 
                 // Detecta cambios
@@ -214,6 +224,7 @@ namespace SistemAutomProcesoTitulacion
         private void cboTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbRol.Items.Clear();
+            cmbRol.Enabled = true;
 
             string tipo = cboTipoUsuario.SelectedItem.ToString();
 
@@ -222,17 +233,16 @@ namespace SistemAutomProcesoTitulacion
                 cmbRol.Items.Add("Coordinador");
                 cmbRol.Items.Add("Comité de investigación");
                 cmbRol.Items.Add("Secretaría académica");
-                cmbRol.Enabled = true;
             }
             else if (tipo == "Estudiante")
             {
                 cmbRol.Items.Add("Estudiante");
-                cmbRol.Enabled = true;
             }
             else if (tipo == "Docente")
             {
-                cmbRol.Enabled = false;
-                cmbRol.Text = ""; // Limpia el texto
+                cmbRol.Items.Add("Tutor");
+                cmbRol.Items.Add("Director");
+                cmbRol.Items.Add("Tribunal");
             }
         }
     }

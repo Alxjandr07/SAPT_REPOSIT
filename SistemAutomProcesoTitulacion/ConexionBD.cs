@@ -175,7 +175,7 @@ namespace SistemAutomProcesoTitulacion
             return dt;
         }
 
-        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol)
+        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol, string tipoUsuario)
         {
             bool exito = false;
             try
@@ -196,6 +196,7 @@ namespace SistemAutomProcesoTitulacion
                         cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena); // el SP ya encripta
                         cmd.Parameters.AddWithValue("@Rol", rol);
+                        cmd.Parameters.AddWithValue("@TipoUsuario", tipoUsuario);
 
                         con.Open();
                         cmd.ExecuteNonQuery();
@@ -210,7 +211,7 @@ namespace SistemAutomProcesoTitulacion
             return exito;
         }
 
-        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol, int estado)
+        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol, int estado, string tipoUsuario)
         {
             bool exito = false;
             try
@@ -232,6 +233,7 @@ namespace SistemAutomProcesoTitulacion
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
                         cmd.Parameters.AddWithValue("@Rol", rol);
                         cmd.Parameters.AddWithValue("@Estado", estado);
+                        cmd.Parameters.AddWithValue("@TipoUsuario", tipoUsuario);
 
                         con.Open();
                         cmd.ExecuteNonQuery();
@@ -302,7 +304,7 @@ namespace SistemAutomProcesoTitulacion
             return exito;
         }
 
-        public static bool ActualizarUsuario(int idUsuario, string nombre, string cedula, string correo, string contrasena, string rol, int estado)
+        public static bool ActualizarUsuario(int idUsuario, string nombre, string cedula, string correo, string contrasena, string rol, int estado, string tipoUsuario)
         {
             bool exito = false;
             try
@@ -319,6 +321,7 @@ namespace SistemAutomProcesoTitulacion
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
                         cmd.Parameters.AddWithValue("@Rol", rol);
                         cmd.Parameters.AddWithValue("@Estado", estado);
+                        cmd.Parameters.AddWithValue("@TipoUsuario", tipoUsuario);
 
                         con.Open();
                         cmd.ExecuteNonQuery();

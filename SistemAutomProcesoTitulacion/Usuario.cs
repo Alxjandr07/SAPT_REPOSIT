@@ -15,5 +15,7 @@ namespace SistemAutomProcesoTitulacion
         public string Contrasena { get; set; }
         public string Rol { get; set; }
         public int Estado { get; set; } // 1=activo, 0=inactivo
+
+        public string TipoUsuario { get; set; }
     }
 }
