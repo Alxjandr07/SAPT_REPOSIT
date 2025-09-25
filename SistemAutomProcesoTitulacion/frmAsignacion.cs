@@ -19,9 +19,32 @@ namespace SistemAutomProcesoTitulacion
 
         private void dgvEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Coordinador coordinador = new Coordinador();
-            dgvEstudiantes.DataSource = coordinador.ObtenerEstudiantes();
+            
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmAsignacion_Load(object sender, EventArgs e)
+        {
+            CargarDocentesEnComboBoxes();
+            Coordinador coordinador = new Coordinador();
+            dgvEstudiantes.DataSource = coordinador.ObtenerEstudiantes();
+        }
+
+        private void CargarDocentesEnComboBoxes()
+        {
+            List<string> docentes = Coordinador.ObtenerNombresDocentes();
+
+            cmbTribunal1.Items.AddRange(docentes.ToArray());
+            cmbTribunal2.Items.AddRange(docentes.ToArray());
+            cmbTribunal3.Items.AddRange(docentes.ToArray());
+            cmbDirector.Items.AddRange(docentes.ToArray());
+            cmbTutor.Items.AddRange(docentes.ToArray());
+        }
+
     }
 }
