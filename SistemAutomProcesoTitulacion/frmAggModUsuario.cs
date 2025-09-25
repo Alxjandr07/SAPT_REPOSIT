@@ -210,5 +210,30 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void cboTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbRol.Items.Clear();
+
+            string tipo = cboTipoUsuario.SelectedItem.ToString();
+
+            if (tipo == "Administrativo")
+            {
+                cmbRol.Items.Add("Coordinador");
+                cmbRol.Items.Add("Comité de investigación");
+                cmbRol.Items.Add("Secretaría académica");
+                cmbRol.Enabled = true;
+            }
+            else if (tipo == "Estudiante")
+            {
+                cmbRol.Items.Add("Estudiante");
+                cmbRol.Enabled = true;
+            }
+            else if (tipo == "Docente")
+            {
+                cmbRol.Enabled = false;
+                cmbRol.Text = ""; // Limpia el texto
+            }
+        }
     }
 }

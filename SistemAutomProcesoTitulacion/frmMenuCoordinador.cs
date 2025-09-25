@@ -155,5 +155,10 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void btnAsignaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new frmAsignacion());
+        }
     }
 }
