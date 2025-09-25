@@ -169,6 +169,20 @@ namespace SistemAutomProcesoTitulacion
             reunionesForm.Show();
             reunionesForm.BringToFront();
         }
+
+        private void btnReunion_Click(object sender, EventArgs e)
+        {
+            if (tutor != null)
+            {
+                frmNotificacion notificacion = new frmNotificacion(tutor.IdTutor, lblRol.Text); // Se agrega el argumento "rol"
+                notificacion.Owner = this; // 'this' es frmMenuCoordinador
+                funciones.AbrirFormularioEnPanel(notificacion, panelContenedorTutor);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró información del estudiante.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 
 }

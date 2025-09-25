@@ -102,12 +102,9 @@
             this.cmbPara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPara.FormattingEnabled = true;
             this.cmbPara.Items.AddRange(new object[] {
-            "Comité de investigación",
             "Director",
-            "Estudiantes",
-            "Secretaría",
-            "Tribunales",
-            "Tutores"});
+            "Estudiante",
+            "Tutor"});
             this.cmbPara.Location = new System.Drawing.Point(109, 45);
             this.cmbPara.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPara.Name = "cmbPara";
