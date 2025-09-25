@@ -74,34 +74,35 @@
             this.toolStripSeparator6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(1067, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(140, 27);
+            this.toolStripLabel3.Size = new System.Drawing.Size(140, 24);
             this.toolStripLabel3.Text = "Gestion de Usuarios";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(50, 27);
+            this.toolStripLabel1.Size = new System.Drawing.Size(50, 24);
             this.toolStripLabel1.Text = "Filtrar:";
             // 
             // tstFiltro
             // 
             this.tstFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstFiltro.Name = "tstFiltro";
-            this.tstFiltro.Size = new System.Drawing.Size(223, 30);
+            this.tstFiltro.Size = new System.Drawing.Size(223, 27);
             // 
             // tsbFiltro
             // 
@@ -109,26 +110,26 @@
             this.tsbFiltro.Image = ((System.Drawing.Image)(resources.GetObject("tsbFiltro.Image")));
             this.tsbFiltro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbFiltro.Name = "tsbFiltro";
-            this.tsbFiltro.Size = new System.Drawing.Size(28, 27);
+            this.tsbFiltro.Size = new System.Drawing.Size(28, 24);
             this.tsbFiltro.Text = "Filtrar";
             this.tsbFiltro.Click += new System.EventHandler(this.tsbFiltro_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(75, 27);
+            this.toolStripLabel2.Size = new System.Drawing.Size(75, 24);
             this.toolStripLabel2.Text = "Acciones: ";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbNuevo
             // 
@@ -136,7 +137,7 @@
             this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(75, 27);
+            this.tsbNuevo.Size = new System.Drawing.Size(75, 24);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
@@ -144,7 +145,7 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbModificar
             // 
@@ -152,7 +153,7 @@
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(96, 27);
+            this.tsbModificar.Size = new System.Drawing.Size(96, 24);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
@@ -160,7 +161,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbInactivo
             // 
@@ -168,7 +169,7 @@
             this.tsbInactivo.Image = ((System.Drawing.Image)(resources.GetObject("tsbInactivo.Image")));
             this.tsbInactivo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbInactivo.Name = "tsbInactivo";
-            this.tsbInactivo.Size = new System.Drawing.Size(84, 27);
+            this.tsbInactivo.Size = new System.Drawing.Size(84, 24);
             this.tsbInactivo.Text = "Inactivo";
             this.tsbInactivo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbInactivo.Click += new System.EventHandler(this.tsbInactivo_Click);
@@ -176,7 +177,7 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbRefrescar
             // 
@@ -184,14 +185,14 @@
             this.tsbRefrescar.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.actualizar;
             this.tsbRefrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefrescar.Name = "tsbRefrescar";
-            this.tsbRefrescar.Size = new System.Drawing.Size(28, 27);
+            this.tsbRefrescar.Size = new System.Drawing.Size(28, 24);
             this.tsbRefrescar.Text = "toolStripButton1";
             this.tsbRefrescar.Click += new System.EventHandler(this.tsbRefrescar_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // dgvGestion
             // 
@@ -204,7 +205,7 @@
             this.dgvGestion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGestion.Location = new System.Drawing.Point(0, 32);
-            this.dgvGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvGestion.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGestion.Name = "dgvGestion";
             this.dgvGestion.ReadOnly = true;
             this.dgvGestion.RowHeadersWidth = 49;
@@ -220,7 +221,7 @@
             this.Controls.Add(this.dgvGestion);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionUsuario";
             this.Text = "frmGestionUsuario";
             this.Load += new System.EventHandler(this.frmGestionUsuario_Load);

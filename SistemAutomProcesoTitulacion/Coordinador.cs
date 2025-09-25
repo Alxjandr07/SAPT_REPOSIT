@@ -11,6 +11,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class Coordinador
     {
+        
         public int IdCoordinador { get; set; }
         public string Nombre { get; set; }
         public string Correo { get; set; }
@@ -24,7 +25,8 @@ namespace SistemAutomProcesoTitulacion
                 usuario.CorreoInstitucional,
                 usuario.Contrasena,
                 usuario.Rol,
-                usuario.Estado
+                usuario.Estado,
+                usuario.TipoUsuario
             );
         }
 
@@ -41,7 +43,8 @@ namespace SistemAutomProcesoTitulacion
                     usuario.CorreoInstitucional,
                     null, // Se pasa null para que el SP ignore la contraseña
                     usuario.Rol,
-                    usuario.Estado
+                    usuario.Estado,
+                    usuario.TipoUsuario
                 );
             }
             else
@@ -54,7 +57,8 @@ namespace SistemAutomProcesoTitulacion
                     usuario.CorreoInstitucional,
                     usuario.Contrasena,
                     usuario.Rol,
-                    usuario.Estado
+                    usuario.Estado,
+                    usuario.TipoUsuario
                 );
             }
         }

@@ -54,9 +54,10 @@
             // 
             this.lblPara.AutoSize = true;
             this.lblPara.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPara.Location = new System.Drawing.Point(31, 43);
+            this.lblPara.Location = new System.Drawing.Point(41, 53);
+            this.lblPara.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPara.Name = "lblPara";
-            this.lblPara.Size = new System.Drawing.Size(58, 23);
+            this.lblPara.Size = new System.Drawing.Size(68, 27);
             this.lblPara.TabIndex = 0;
             this.lblPara.Text = "Para:";
             // 
@@ -64,9 +65,10 @@
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(3, 5);
+            this.lblMensaje.Location = new System.Drawing.Point(4, 6);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(153, 23);
+            this.lblMensaje.Size = new System.Drawing.Size(188, 27);
             this.lblMensaje.TabIndex = 1;
             this.lblMensaje.Text = "Mensaje Nuevo";
             // 
@@ -74,9 +76,10 @@
             // 
             this.lblAsunto.AutoSize = true;
             this.lblAsunto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsunto.Location = new System.Drawing.Point(31, 86);
+            this.lblAsunto.Location = new System.Drawing.Point(41, 106);
+            this.lblAsunto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAsunto.Name = "lblAsunto";
-            this.lblAsunto.Size = new System.Drawing.Size(77, 23);
+            this.lblAsunto.Size = new System.Drawing.Size(95, 27);
             this.lblAsunto.TabIndex = 2;
             this.lblAsunto.Text = "Asunto:";
             // 
@@ -88,9 +91,10 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.Green;
-            this.btnEnviar.Location = new System.Drawing.Point(122, 395);
+            this.btnEnviar.Location = new System.Drawing.Point(163, 486);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(104, 43);
+            this.btnEnviar.Size = new System.Drawing.Size(139, 53);
             this.btnEnviar.TabIndex = 14;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
@@ -109,28 +113,30 @@
             "Secretaría",
             "Tribunales",
             "Tutores"});
-            this.cmbPara.Location = new System.Drawing.Point(109, 45);
-            this.cmbPara.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPara.Location = new System.Drawing.Point(145, 55);
+            this.cmbPara.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPara.Name = "cmbPara";
-            this.cmbPara.Size = new System.Drawing.Size(184, 21);
+            this.cmbPara.Size = new System.Drawing.Size(244, 24);
             this.cmbPara.TabIndex = 15;
             // 
             // txtAsunto
             // 
             this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAsunto.Location = new System.Drawing.Point(109, 86);
+            this.txtAsunto.Location = new System.Drawing.Point(145, 106);
+            this.txtAsunto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAsunto.Name = "txtAsunto";
-            this.txtAsunto.Size = new System.Drawing.Size(183, 20);
+            this.txtAsunto.Size = new System.Drawing.Size(243, 22);
             this.txtAsunto.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(374, 214);
+            this.label1.Location = new System.Drawing.Point(499, 263);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.Size = new System.Drawing.Size(0, 27);
             this.label1.TabIndex = 18;
             // 
             // panel1
@@ -146,9 +152,10 @@
             this.panel1.Controls.Add(this.lblAsunto);
             this.panel1.Controls.Add(this.txtAsunto);
             this.panel1.Controls.Add(this.cmbPara);
-            this.panel1.Location = new System.Drawing.Point(122, 77);
+            this.panel1.Location = new System.Drawing.Point(163, 95);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 312);
+            this.panel1.Size = new System.Drawing.Size(741, 384);
             this.panel1.TabIndex = 19;
             // 
             // panel5
@@ -156,17 +163,19 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(298, 3);
+            this.panel5.Location = new System.Drawing.Point(397, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(253, 103);
+            this.panel5.Size = new System.Drawing.Size(337, 126);
             this.panel5.TabIndex = 18;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lblMensaje);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Location = new System.Drawing.Point(4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(157, 33);
+            this.panel4.Size = new System.Drawing.Size(209, 41);
             this.panel4.TabIndex = 21;
             // 
             // panel2
@@ -176,9 +185,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtMensaje);
-            this.panel2.Location = new System.Drawing.Point(3, 112);
+            this.panel2.Location = new System.Drawing.Point(4, 138);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(548, 195);
+            this.panel2.Size = new System.Drawing.Size(730, 240);
             this.panel2.TabIndex = 17;
             // 
             // txtMensaje
@@ -186,10 +196,11 @@
             this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMensaje.Location = new System.Drawing.Point(3, 3);
+            this.txtMensaje.Location = new System.Drawing.Point(4, 4);
+            this.txtMensaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMensaje.Multiline = true;
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(540, 187);
+            this.txtMensaje.Size = new System.Drawing.Size(719, 229);
             this.txtMensaje.TabIndex = 0;
             // 
             // panel3
@@ -199,8 +210,9 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 48);
+            this.panel3.Size = new System.Drawing.Size(1067, 59);
             this.panel3.TabIndex = 20;
             // 
             // label2
@@ -210,9 +222,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(12, 6);
+            this.label2.Location = new System.Drawing.Point(16, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 39);
+            this.label2.Size = new System.Drawing.Size(374, 48);
             this.label2.TabIndex = 4;
             this.label2.Text = "Redactar Mensaje";
             // 
@@ -223,9 +236,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(671, 6);
+            this.label5.Location = new System.Drawing.Point(895, 7);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 39);
+            this.label5.Size = new System.Drawing.Size(141, 48);
             this.label5.TabIndex = 3;
             this.label5.Text = "UTEQ";
             // 
@@ -239,9 +253,10 @@
             this.btnAdjuntar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdjuntar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdjuntar.ForeColor = System.Drawing.Color.Green;
-            this.btnAdjuntar.Location = new System.Drawing.Point(232, 395);
+            this.btnAdjuntar.Location = new System.Drawing.Point(309, 486);
+            this.btnAdjuntar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdjuntar.Name = "btnAdjuntar";
-            this.btnAdjuntar.Size = new System.Drawing.Size(104, 43);
+            this.btnAdjuntar.Size = new System.Drawing.Size(139, 53);
             this.btnAdjuntar.TabIndex = 21;
             this.btnAdjuntar.UseVisualStyleBackColor = true;
             this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
@@ -249,15 +264,16 @@
             // 
             // frmMensaje
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnAdjuntar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnviar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMensaje";
             this.Text = "frmNotificacion";
             this.Load += new System.EventHandler(this.frmNotificacion_Load);

@@ -97,5 +97,10 @@ namespace SistemAutomProcesoTitulacion
         {
             dgvGestion.DataSource = coordinador.ObtenerUsuarios("Activos");
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
