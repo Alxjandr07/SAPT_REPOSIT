@@ -8,6 +8,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class Estudiante
     {
+        public int IdEstudiante { get; set; }
         public int IdTutor { get; set; }
         public string Nombre { get; set; }
         public string Correo { get; set; }
