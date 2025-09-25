@@ -20,7 +20,6 @@ namespace SistemAutomProcesoTitulacion
             InitializeComponent();
             this.coordinador = coordinador;
             this.Load += frmNotificacion_Load;
-            toolTip1.SetToolTip(btnAdjuntar, "Adjuntar");
         }
 
         private void frmNotificacion_Load(object sender, EventArgs e)
@@ -29,11 +28,6 @@ namespace SistemAutomProcesoTitulacion
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdjuntar_Click(object sender, EventArgs e)
         {
 
         }
