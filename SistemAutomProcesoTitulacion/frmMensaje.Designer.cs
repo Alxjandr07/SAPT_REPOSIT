@@ -43,7 +43,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAdjuntar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -229,30 +228,11 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "UTEQ";
             // 
-            // btnAdjuntar
-            // 
-            this.btnAdjuntar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdjuntar.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.adjuntar_archivo;
-            this.btnAdjuntar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdjuntar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAdjuntar.FlatAppearance.BorderSize = 2;
-            this.btnAdjuntar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdjuntar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdjuntar.ForeColor = System.Drawing.Color.Green;
-            this.btnAdjuntar.Location = new System.Drawing.Point(232, 395);
-            this.btnAdjuntar.Name = "btnAdjuntar";
-            this.btnAdjuntar.Size = new System.Drawing.Size(104, 43);
-            this.btnAdjuntar.TabIndex = 21;
-            this.btnAdjuntar.UseVisualStyleBackColor = true;
-            this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
-            this.btnAdjuntar.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            // 
             // frmMensaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAdjuntar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -291,6 +271,5 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtMensaje;
-        private System.Windows.Forms.Button btnAdjuntar;
     }
 }
