@@ -32,14 +32,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbTribunal1 = new System.Windows.Forms.ComboBox();
+            this.cmbTribunal2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbTribunal3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbTutor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbDirector = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -59,6 +59,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(926, 64);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -95,21 +96,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "1* Miembro de Tribunal:";
             // 
-            // comboBox1
+            // cmbTribunal1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(529, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(371, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cmbTribunal1.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTribunal1.FormattingEnabled = true;
+            this.cmbTribunal1.Location = new System.Drawing.Point(529, 157);
+            this.cmbTribunal1.Name = "cmbTribunal1";
+            this.cmbTribunal1.Size = new System.Drawing.Size(371, 24);
+            this.cmbTribunal1.TabIndex = 3;
             // 
-            // comboBox2
+            // cmbTribunal2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(529, 215);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(371, 24);
-            this.comboBox2.TabIndex = 5;
+            this.cmbTribunal2.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTribunal2.FormattingEnabled = true;
+            this.cmbTribunal2.Location = new System.Drawing.Point(529, 215);
+            this.cmbTribunal2.Name = "cmbTribunal2";
+            this.cmbTribunal2.Size = new System.Drawing.Size(371, 24);
+            this.cmbTribunal2.TabIndex = 5;
             // 
             // label2
             // 
@@ -121,13 +124,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "2 Miembro de Tribunal:";
             // 
-            // comboBox3
+            // cmbTribunal3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(529, 277);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(371, 24);
-            this.comboBox3.TabIndex = 7;
+            this.cmbTribunal3.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTribunal3.FormattingEnabled = true;
+            this.cmbTribunal3.Location = new System.Drawing.Point(529, 277);
+            this.cmbTribunal3.Name = "cmbTribunal3";
+            this.cmbTribunal3.Size = new System.Drawing.Size(371, 24);
+            this.cmbTribunal3.TabIndex = 7;
             // 
             // label3
             // 
@@ -139,13 +143,14 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "3* Miembro de Tribunal:";
             // 
-            // comboBox4
+            // cmbTutor
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(529, 342);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(371, 24);
-            this.comboBox4.TabIndex = 9;
+            this.cmbTutor.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTutor.FormattingEnabled = true;
+            this.cmbTutor.Location = new System.Drawing.Point(529, 342);
+            this.cmbTutor.Name = "cmbTutor";
+            this.cmbTutor.Size = new System.Drawing.Size(371, 24);
+            this.cmbTutor.TabIndex = 9;
             // 
             // label4
             // 
@@ -157,13 +162,14 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Tutor:";
             // 
-            // comboBox5
+            // cmbDirector
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(529, 405);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(371, 24);
-            this.comboBox5.TabIndex = 11;
+            this.cmbDirector.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDirector.FormattingEnabled = true;
+            this.cmbDirector.Location = new System.Drawing.Point(529, 405);
+            this.cmbDirector.Name = "cmbDirector";
+            this.cmbDirector.Size = new System.Drawing.Size(371, 24);
+            this.cmbDirector.TabIndex = 11;
             // 
             // label5
             // 
@@ -225,9 +231,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(775, 68);
+            this.button4.Location = new System.Drawing.Point(727, 68);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 24);
+            this.button4.Size = new System.Drawing.Size(192, 24);
             this.button4.TabIndex = 15;
             this.button4.Text = "Agregar un docente";
             this.button4.UseVisualStyleBackColor = true;
@@ -241,21 +247,23 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cmbDirector);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cmbTutor);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cmbTribunal3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbTribunal2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTribunal1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEstudiantes);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsignacion";
             this.Text = "frmAsignacion";
+            this.Load += new System.EventHandler(this.frmAsignacion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
@@ -269,14 +277,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvEstudiantes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbTribunal1;
+        private System.Windows.Forms.ComboBox cmbTribunal2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbTribunal3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbTutor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbDirector;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

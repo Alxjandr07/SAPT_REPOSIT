@@ -93,5 +93,26 @@ namespace SistemAutomProcesoTitulacion
                 return dt;
             }
         }
+
+        public static List<string> ObtenerNombresDocentes()
+        {
+            List<string> nombres = new List<string>();
+
+            using (SqlConnection con = new SqlConnection(ConexionBD.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("ObtenerNombresDocentes", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    nombres.Add(reader.GetString(0)); // NombreCompleto
+                }
+            }
+
+            return nombres;
+        }
     }
 }
