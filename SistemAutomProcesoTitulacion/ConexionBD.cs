@@ -175,41 +175,7 @@ namespace SistemAutomProcesoTitulacion
             return dt;
         }
 
-        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol, string tipoUsuario)
-        {
-            bool exito = false;
-            try
-            {
-                if (ConexionBD.UsuarioDuplicado(correo, cedula, contrasena))
-                {
-                    MessageBox.Show("⚠️ Ya existe un usuario con ese correo, cédula o la misma combinación de correo y contraseña.");
-                    return exito;
-                }
-
-                using (SqlConnection con = new SqlConnection(cadena))
-                {
-                    using (SqlCommand cmd = new SqlCommand("RegistrarUsuario", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
-                        cmd.Parameters.AddWithValue("@Cedula", cedula);
-                        cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
-                        cmd.Parameters.AddWithValue("@Contrasena", contrasena); // el SP ya encripta
-                        cmd.Parameters.AddWithValue("@Rol", rol);
-                        cmd.Parameters.AddWithValue("@TipoUsuario", tipoUsuario);
-
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        exito = true;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("❌ Error al registrar usuario: " + ex.Message);
-            }
-            return exito;
-        }
+        
 
         public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol, int estado, string tipoUsuario)
         {
