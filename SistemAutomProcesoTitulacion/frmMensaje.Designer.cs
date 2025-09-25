@@ -43,7 +43,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAdjuntar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -107,7 +106,6 @@
             this.cmbPara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPara.FormattingEnabled = true;
             this.cmbPara.Items.AddRange(new object[] {
-            "Comité de investigación",
             "Director",
             "Estudiantes",
             "Secretaría",
@@ -115,6 +113,7 @@
             "Tutores"});
             this.cmbPara.Location = new System.Drawing.Point(145, 55);
             this.cmbPara.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.cmbPara.Name = "cmbPara";
             this.cmbPara.Size = new System.Drawing.Size(244, 24);
             this.cmbPara.TabIndex = 15;
@@ -243,6 +242,7 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "UTEQ";
             // 
+
             // btnAdjuntar
             // 
             this.btnAdjuntar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -262,12 +262,14 @@
             this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
             this.btnAdjuntar.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             // 
+
             // frmMensaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnAdjuntar);
+
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -307,6 +309,5 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtMensaje;
-        private System.Windows.Forms.Button btnAdjuntar;
     }
 }

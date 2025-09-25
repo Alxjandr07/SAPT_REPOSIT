@@ -32,17 +32,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelNotificacion = new System.Windows.Forms.Panel();
-            this.btnTodo = new System.Windows.Forms.Button();
-            this.btnNoLeido = new System.Windows.Forms.Button();
+            this.btnVer = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNoLeido = new System.Windows.Forms.Button();
+            this.btnTodo = new System.Windows.Forms.Button();
+            this.panelNotificacion = new System.Windows.Forms.Panel();
             this.dgvNotificacion = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.txtPara = new System.Windows.Forms.TextBox();
-            this.btnVer = new System.Windows.Forms.Button();
-            this.txtAsunto = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.txtAsunto = new System.Windows.Forms.TextBox();
+            this.txtPara = new System.Windows.Forms.TextBox();
+            this.txtMensaje = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelNotificacion.SuspendLayout();
@@ -104,49 +106,21 @@
             this.panel1.Size = new System.Drawing.Size(530, 286);
             this.panel1.TabIndex = 22;
             // 
-            // panelNotificacion
+            // btnVer
             // 
-            this.panelNotificacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelNotificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelNotificacion.Controls.Add(this.dgvNotificacion);
-            this.panelNotificacion.Location = new System.Drawing.Point(3, 3);
-            this.panelNotificacion.Name = "panelNotificacion";
-            this.panelNotificacion.Size = new System.Drawing.Size(522, 229);
-            this.panelNotificacion.TabIndex = 17;
-            // 
-            // btnTodo
-            // 
-            this.btnTodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTodo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnTodo.FlatAppearance.BorderSize = 2;
-            this.btnTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTodo.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodo.ForeColor = System.Drawing.Color.Green;
-            this.btnTodo.Location = new System.Drawing.Point(3, 238);
-            this.btnTodo.Name = "btnTodo";
-            this.btnTodo.Size = new System.Drawing.Size(104, 43);
-            this.btnTodo.TabIndex = 18;
-            this.btnTodo.Text = "Todos";
-            this.btnTodo.UseVisualStyleBackColor = true;
-            this.btnTodo.Click += new System.EventHandler(this.btnTodo_Click);
-            // 
-            // btnNoLeido
-            // 
-            this.btnNoLeido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNoLeido.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnNoLeido.FlatAppearance.BorderSize = 2;
-            this.btnNoLeido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNoLeido.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNoLeido.ForeColor = System.Drawing.Color.Green;
-            this.btnNoLeido.Location = new System.Drawing.Point(113, 238);
-            this.btnNoLeido.Name = "btnNoLeido";
-            this.btnNoLeido.Size = new System.Drawing.Size(104, 43);
-            this.btnNoLeido.TabIndex = 19;
-            this.btnNoLeido.Text = "No leidos";
-            this.btnNoLeido.UseVisualStyleBackColor = true;
-            this.btnNoLeido.Click += new System.EventHandler(this.btnNoLeido_Click);
+            this.btnVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnVer.FlatAppearance.BorderSize = 2;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.Color.Green;
+            this.btnVer.Location = new System.Drawing.Point(223, 238);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(104, 43);
+            this.btnVer.TabIndex = 21;
+            this.btnVer.Text = "Ver";
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // btnEliminar
             // 
@@ -164,10 +138,55 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnNoLeido
+            // 
+            this.btnNoLeido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNoLeido.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnNoLeido.FlatAppearance.BorderSize = 2;
+            this.btnNoLeido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoLeido.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNoLeido.ForeColor = System.Drawing.Color.Green;
+            this.btnNoLeido.Location = new System.Drawing.Point(113, 238);
+            this.btnNoLeido.Name = "btnNoLeido";
+            this.btnNoLeido.Size = new System.Drawing.Size(104, 43);
+            this.btnNoLeido.TabIndex = 19;
+            this.btnNoLeido.Text = "No leidos";
+            this.btnNoLeido.UseVisualStyleBackColor = true;
+            this.btnNoLeido.Click += new System.EventHandler(this.btnNoLeido_Click);
+            // 
+            // btnTodo
+            // 
+            this.btnTodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnTodo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnTodo.FlatAppearance.BorderSize = 2;
+            this.btnTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodo.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodo.ForeColor = System.Drawing.Color.Green;
+            this.btnTodo.Location = new System.Drawing.Point(3, 238);
+            this.btnTodo.Name = "btnTodo";
+            this.btnTodo.Size = new System.Drawing.Size(104, 43);
+            this.btnTodo.TabIndex = 18;
+            this.btnTodo.Text = "Todos";
+            this.btnTodo.UseVisualStyleBackColor = true;
+            this.btnTodo.Click += new System.EventHandler(this.btnTodo_Click);
+            // 
+            // panelNotificacion
+            // 
+            this.panelNotificacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelNotificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNotificacion.Controls.Add(this.dgvNotificacion);
+            this.panelNotificacion.Location = new System.Drawing.Point(3, 3);
+            this.panelNotificacion.Name = "panelNotificacion";
+            this.panelNotificacion.Size = new System.Drawing.Size(522, 229);
+            this.panelNotificacion.TabIndex = 17;
+            // 
             // dgvNotificacion
             // 
             this.dgvNotificacion.AllowUserToAddRows = false;
             this.dgvNotificacion.AllowUserToDeleteRows = false;
+            this.dgvNotificacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNotificacion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNotificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotificacion.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,6 +203,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnConfirmar);
             this.panel2.Controls.Add(this.txtAsunto);
             this.panel2.Controls.Add(this.txtPara);
@@ -192,53 +213,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 286);
             this.panel2.TabIndex = 23;
-            // 
-            // txtMensaje
-            // 
-            this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMensaje.Location = new System.Drawing.Point(3, 55);
-            this.txtMensaje.Multiline = true;
-            this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(232, 177);
-            this.txtMensaje.TabIndex = 0;
-            // 
-            // txtPara
-            // 
-            this.txtPara.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPara.Location = new System.Drawing.Point(3, 3);
-            this.txtPara.Name = "txtPara";
-            this.txtPara.Size = new System.Drawing.Size(232, 20);
-            this.txtPara.TabIndex = 24;
-            // 
-            // btnVer
-            // 
-            this.btnVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnVer.FlatAppearance.BorderSize = 2;
-            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVer.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVer.ForeColor = System.Drawing.Color.Green;
-            this.btnVer.Location = new System.Drawing.Point(223, 238);
-            this.btnVer.Name = "btnVer";
-            this.btnVer.Size = new System.Drawing.Size(104, 43);
-            this.btnVer.TabIndex = 21;
-            this.btnVer.Text = "Ver";
-            this.btnVer.UseVisualStyleBackColor = true;
-            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
-            // 
-            // txtAsunto
-            // 
-            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAsunto.Location = new System.Drawing.Point(3, 29);
-            this.txtAsunto.Name = "txtAsunto";
-            this.txtAsunto.Size = new System.Drawing.Size(232, 20);
-            this.txtAsunto.TabIndex = 25;
             // 
             // btnConfirmar
             // 
@@ -255,6 +229,65 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // txtAsunto
+            // 
+            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAsunto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtAsunto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAsunto.Location = new System.Drawing.Point(56, 29);
+            this.txtAsunto.Multiline = true;
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.ReadOnly = true;
+            this.txtAsunto.Size = new System.Drawing.Size(179, 46);
+            this.txtAsunto.TabIndex = 25;
+            // 
+            // txtPara
+            // 
+            this.txtPara.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPara.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtPara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPara.Location = new System.Drawing.Point(56, 3);
+            this.txtPara.Name = "txtPara";
+            this.txtPara.ReadOnly = true;
+            this.txtPara.Size = new System.Drawing.Size(179, 20);
+            this.txtPara.TabIndex = 24;
+            // 
+            // txtMensaje
+            // 
+            this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMensaje.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMensaje.Location = new System.Drawing.Point(3, 81);
+            this.txtMensaje.Multiline = true;
+            this.txtMensaje.Name = "txtMensaje";
+            this.txtMensaje.ReadOnly = true;
+            this.txtMensaje.Size = new System.Drawing.Size(232, 151);
+            this.txtMensaje.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Para:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 15);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Asunto:";
             // 
             // frmNotificacion
             // 
@@ -296,5 +329,7 @@
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TextBox txtAsunto;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

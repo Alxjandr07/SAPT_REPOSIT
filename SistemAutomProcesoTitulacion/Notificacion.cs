@@ -22,13 +22,14 @@ namespace SistemAutomProcesoTitulacion
         public bool Estado { get; set; }
 
         // Obtiene notificaciones para un estudiante específico
-        public static DataTable ObtenerNotificacionesEstudiante(int idEstudiante, bool? soloNoLeidos = null)
+        public static DataTable ObtenerNotificacionesUsuario(int idUsuario, string rol, bool? soloNoLeidos = null)
         {
             using (SqlConnection conn = ConexionBD.ObtenerNuevaConexion())
             {
-                SqlCommand cmd = new SqlCommand("sp_ObtenerNotificacionesEstudiante", conn);
+                SqlCommand cmd = new SqlCommand("sp_ObtenerNotificacionesUsuario", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdEstudiante", idEstudiante);
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                cmd.Parameters.AddWithValue("@Rol", rol);
                 if (soloNoLeidos.HasValue)
                     cmd.Parameters.AddWithValue("@SoloNoLeidos", soloNoLeidos.Value);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -38,28 +39,26 @@ namespace SistemAutomProcesoTitulacion
             }
         }
 
-        // Marca como leída la notificación para un estudiante
-        public static void MarcarComoLeido(int idNotificacion, int idEstudiante)
+        public static void MarcarComoLeido(int idNotificacion, int idUsuario)
         {
             using (SqlConnection conn = ConexionBD.ObtenerNuevaConexion())
             {
                 SqlCommand cmd = new SqlCommand("sp_MarcarNotificacionLeida", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdNotificacion", idNotificacion);
-                cmd.Parameters.AddWithValue("@IdEstudiante", idEstudiante);
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
                 cmd.ExecuteNonQuery();
             }
         }
 
-        // Oculta la notificación para un estudiante
-        public static void OcultarNotificacion(int idNotificacion, int idEstudiante)
+        public static void OcultarNotificacion(int idNotificacion, int idUsuario)
         {
             using (SqlConnection conn = ConexionBD.ObtenerNuevaConexion())
             {
                 SqlCommand cmd = new SqlCommand("sp_OcultarNotificacion", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdNotificacion", idNotificacion);
-                cmd.Parameters.AddWithValue("@IdEstudiante", idEstudiante);
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
                 cmd.ExecuteNonQuery();
             }
         }

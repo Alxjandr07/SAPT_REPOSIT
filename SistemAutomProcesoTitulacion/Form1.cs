@@ -69,6 +69,7 @@ namespace SistemAutomProcesoTitulacion
                 case "Tutor":
                     var tutor = new Tutor
                     {
+                        IdTutor = idUsuario,
                         Nombre = nombre,
                         Correo = correo
                     };
