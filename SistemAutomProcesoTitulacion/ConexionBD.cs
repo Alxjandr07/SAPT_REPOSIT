@@ -12,7 +12,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class ConexionBD
     {
-        private static string cadena = "Server=ALXJANDR07PC\\SQLEXPRESS; Database=SistemaTitulacionUTEQ; Integrated Security=true";
+        private static string cadena = "Server=.; Database=SistemaTitulacionUTEQ; Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(cadena);
 
         public static SqlConnection ObtenerConexion()
@@ -30,6 +30,21 @@ namespace SistemAutomProcesoTitulacion
                 MessageBox.Show("❌ Error al conectar con la base de datos: " + ex.Message);
             }
 
+            return conexion;
+        }
+
+        public static SqlConnection ObtenerNuevaConexion()
+        {
+            var conexion = new SqlConnection(cadena);
+            try
+            {
+                conexion.Open();
+                // Opcional: MessageBox.Show("✅ Conexión exitosa a la base de datos (nueva instancia).");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al conectar con la base de datos: " + ex.Message);
+            }
             return conexion;
         }
 

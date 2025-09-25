@@ -59,11 +59,12 @@ namespace SistemAutomProcesoTitulacion
                 case "Estudiante":
                     var estudiante = new Estudiante
                     {
+                        IdEstudiante = idUsuario,
                         Nombre = nombre,
                         Correo = correo
                     };
 
-                    destino = new FrmMenuEstudiantes(nombre, rol);
+                    destino = new FrmMenuEstudiantes(estudiante, nombre, rol);
                     break;
                 case "Tutor":
                     var tutor = new Tutor

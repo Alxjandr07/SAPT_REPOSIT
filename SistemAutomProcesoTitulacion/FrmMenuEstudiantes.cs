@@ -257,8 +257,18 @@ namespace SistemAutomProcesoTitulacion
 
         }
 
-        
-
-        
+        private void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            if (estudiante != null)
+            {
+                frmNotificacion notificacion = new frmNotificacion(estudiante.IdEstudiante);
+                notificacion.Owner = this; // 'this' es frmMenuCoordinador
+                funciones.AbrirFormularioEnPanel(notificacion, panelContenedor);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró información del estudiante.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
