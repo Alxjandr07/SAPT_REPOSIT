@@ -75,5 +75,19 @@ namespace SistemAutomProcesoTitulacion
         {
             return ConexionBD.AgregarNotificacion(this.IdCoordinador, para, asunto, mensaje);
         }
+
+        public DataTable ObtenerEstudiantes()
+        {
+            using (SqlConnection con = new SqlConnection(ConexionBD.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("ObtenerEstudiantes", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
     }
 }
